@@ -4,6 +4,7 @@
 
 <app-form-input-city
   (cityWeatherChange)="updateCityWeather($event)"
+  [isLoading]="weatherService.requestStatus.isLoading"
 ></app-form-input-city>
 
 <div class="card-list">

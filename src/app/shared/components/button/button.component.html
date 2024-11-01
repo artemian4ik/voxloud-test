@@ -2,7 +2,13 @@
   class="btn"
   [type]="buttonType"
   [ngClass]="buttonClass"
+  [disabled]="isButtonLoading()"
   (click)="onClick()"
 >
-  <ng-content></ng-content>
+  <div *ngIf="isButtonLoading()">
+    <app-loader-spinner />
+  </div>
+  <div *ngIf="!isButtonLoading()">
+    <ng-content></ng-content>
+  </div>
 </button>

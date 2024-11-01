@@ -17,4 +17,14 @@
   &:active {
     background-color: hsla(318, 69%, 55%, 0.82);
   }
+
+  &:disabled {
+    background-color: hsla(318, 92%, 76%, 0.82);
+    cursor: default;
+  }
+}
+
+app-loader-spinner {
+  display: flex;
+  justify-content: center;
 }

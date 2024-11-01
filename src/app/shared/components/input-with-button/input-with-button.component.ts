@@ -16,10 +16,12 @@ export class InputWithButtonComponent {
   @Input() buttonClass: string = '';
   @Input() buttonType: string = 'button';
   @Input() buttonText: string = 'Submit';
+  @Input() buttonLoading: boolean = false;
   @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() buttonClick: EventEmitter<void> = new EventEmitter<void>();
 
   onInputChange(value: string) {
+    console.log(this.buttonLoading);
     this.valueChange.emit(value);
   }
 
