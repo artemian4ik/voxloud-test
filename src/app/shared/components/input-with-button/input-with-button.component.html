@@ -5,7 +5,11 @@
     [placeholder]="placeholder"
     (valueChange)="onInputChange($event)"
   ></app-input>
-  <app-button [buttonClass]="buttonClass" (click)="onButtonClick()">
+  <app-button
+    [buttonType]="buttonType"
+    [buttonClass]="buttonClass"
+    (click)="onButtonClick()"
+  >
     {{ buttonText }}
   </app-button>
 </div>

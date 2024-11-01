@@ -1,6 +1,6 @@
 <div class="form-add-city">
   <app-block class="form-card-add-city">
-    <form (click)="addCityToLocalStore()" #cityForm="ngForm">
+    <form #cityForm="ngForm">
       <h2>Add a weather card</h2>
       <app-input-with-button
         id="city"
@@ -8,6 +8,9 @@
         type="text"
         placeholder="Inpun City"
         buttonText="Add Card"
+        buttonType="submit"
+        (buttonClick)="addCityToLocalStore()"
+        (valueChange)="handleCityChange($event)"
         required
       />
     </form>

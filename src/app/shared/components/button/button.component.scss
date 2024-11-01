@@ -8,6 +8,7 @@
   color: #fff;
   background-color: hsla(318, 100%, 65%, 0.82);
   transition: background-color 100ms linear;
+  cursor: pointer;
 
   &:hover {
     background-color: hsla(318, 98%, 57%, 0.82);

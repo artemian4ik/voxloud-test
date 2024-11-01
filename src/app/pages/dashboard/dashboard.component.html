@@ -1,0 +1,18 @@
+<div class="logo">
+  <h1>Weather Dashboard</h1>
+</div>
+
+<app-form-input-city
+  (cityWeatherChange)="updateCityWeather($event)"
+></app-form-input-city>
+
+<div class="card-list">
+  <app-city *ngFor="let weather of cityWeather">
+    <div front>
+      <h2>{{ weather.city }}</h2>
+    </div>
+    <div back>
+      {{ weather.weather }}
+    </div>
+  </app-city>
+</div>

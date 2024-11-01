@@ -14,6 +14,7 @@ export class InputWithButtonComponent {
   @Input() value: string = '';
   @Input() placeholder: string = '';
   @Input() buttonClass: string = '';
+  @Input() buttonType: string = 'button';
   @Input() buttonText: string = 'Submit';
   @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() buttonClick: EventEmitter<void> = new EventEmitter<void>();

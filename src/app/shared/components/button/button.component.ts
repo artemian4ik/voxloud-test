@@ -11,6 +11,7 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() buttonClass: string = '';
   @Input() buttonText: string = 'Submit';
+  @Input() buttonType: string = 'button';
 
   onClick() {}
 }

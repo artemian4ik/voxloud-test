@@ -1,3 +1,8 @@
-<button class="btn" [ngClass]="buttonClass" (click)="onClick()">
+<button
+  class="btn"
+  [type]="buttonType"
+  [ngClass]="buttonClass"
+  (click)="onClick()"
+>
   <ng-content></ng-content>
 </button>

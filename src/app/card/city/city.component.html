@@ -1,1 +1,10 @@
-<p>city works!</p>
+<div class="card" [ngClass]="{ flipped: isFlipped }">
+  <div class="card-content" (click)="onClickFlipCard()">
+    <div class="card-front">
+      <ng-content select="[front]"></ng-content>
+    </div>
+    <div class="card-back">
+      <ng-content select="[back]"></ng-content>
+    </div>
+  </div>
+</div>
