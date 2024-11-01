@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputCityFormComponent } from './input-city.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('InputCityComponent', () => {
   let component: InputCityFormComponent;
@@ -8,7 +9,7 @@ describe('InputCityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InputCityFormComponent],
+      imports: [InputCityFormComponent, HttpClientModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(InputCityFormComponent);

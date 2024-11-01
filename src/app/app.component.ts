@@ -10,5 +10,5 @@ import { InputCityFormComponent } from './form/input-city/input-city.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Weather Dashboard';
+  title = 'voxloud-test';
 }
