@@ -24,7 +24,15 @@ export class DashboardComponent {
   cityWeather: WeatherInterface[] = testWeatherData;
   getWeatherImageById = getWeatherImageById;
 
-  updateCityWeather(newCityWeather: WeatherInterface) {
+  updateCityWeather = (newCityWeather: WeatherInterface): void => {
     this.cityWeather = [...this.cityWeather, newCityWeather];
-  }
+  };
+
+  onDeleteCity = (cityId: number) => {
+    const index = this.cityWeather.findIndex((weather) => weather.id == cityId);
+
+    if (index != -1) {
+      this.cityWeather.splice(index, 1);
+    }
+  };
 }

@@ -36,7 +36,11 @@
           />
         </div>
       </div>
-      <app-icon-button icon="delete" alt="Delete"></app-icon-button>
+      <app-icon-button
+        icon="delete"
+        alt="Delete"
+        (click)="onDeleteCity(weather.id)"
+      ></app-icon-button>
     </div>
   </app-city>
 </div>
