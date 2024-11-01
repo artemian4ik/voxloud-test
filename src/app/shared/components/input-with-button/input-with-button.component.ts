@@ -21,7 +21,6 @@ export class InputWithButtonComponent {
   @Output() buttonClick: EventEmitter<void> = new EventEmitter<void>();
 
   onInputChange(value: string) {
-    console.log(this.buttonLoading);
     this.valueChange.emit(value);
   }
 

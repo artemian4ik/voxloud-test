@@ -55,6 +55,7 @@ export class WeatherService {
       }),
       catchError((error) => {
         this.requestStatus.error = 'City not found';
+        this.requestStatus.isLoading = false;
         console.error('Error! Can\'t to get "openweathermap" :', error);
         return throwError(() => new Error('City not found'));
       })

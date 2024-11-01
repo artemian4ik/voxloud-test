@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BlockComponent } from '../../card/block/block.component';
 import { InputComponent } from '../../shared/components/input/input.component';
@@ -7,7 +13,11 @@ import { WeatherService } from '../../services/weather.service';
 import { WeatherInterface } from '../../models/weather.model';
 import { LoaderSpinnerComponent } from '../../loader-spinner/loader-spinner.component';
 import { CommonModule } from '@angular/common';
-
+import { NotificationComponent } from '../../shared/components/notification/notification.component';
+interface Notification {
+  message: string;
+  type: 'success' | 'error' | 'info';
+}
 @Component({
   selector: 'app-form-input-city',
   standalone: true,
@@ -18,6 +28,7 @@ import { CommonModule } from '@angular/common';
     InputComponent,
     InputWithButtonComponent,
     LoaderSpinnerComponent,
+    NotificationComponent,
   ],
   templateUrl: './input-city.component.html',
   styleUrl: './input-city.component.scss',
@@ -25,6 +36,7 @@ import { CommonModule } from '@angular/common';
 export class InputCityFormComponent {
   @Input() isLoading: boolean = false;
   @Output() cityWeatherChange = new EventEmitter<WeatherInterface>();
+  @ViewChild(NotificationComponent) notification!: NotificationComponent;
   errorMessage: string | null = null;
   inputCityName: string = '';
 
@@ -42,6 +54,7 @@ export class InputCityFormComponent {
       },
       error: (error) => {
         this.errorMessage = error.message;
+        this.notification.displayNotification(error.message, 'error');
       },
     });
   };
