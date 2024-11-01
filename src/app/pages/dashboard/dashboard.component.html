@@ -17,7 +17,31 @@
       <h2>{{ weather.city }} {{ weather.temperature | mathRound }}&deg;C</h2>
     </div>
     <div back>
-      {{ weather.weather_id }}
+      <h3>{{ weather.city }} {{ weather.temperature | mathRound }}&deg;C</h3>
+      <div class="card-back-block">
+        <div class="card-information-weather">
+          <div>
+            <p>Feels like: {{ weather.condition.feels_like }}&deg;C</p>
+            <p>Pressure: {{ weather.condition.pressure }} mm</p>
+            <p>Humidity: {{ weather.condition.humidity }}%</p>
+            <p>Wind deg: {{ weather.wind.deg }}&deg;</p>
+            <p>Wind speed: {{ weather.wind.speed }} m/s</p>
+          </div>
+        </div>
+        <div class="card-weather-block">
+          <img
+            class="weather-back-logo"
+            [src]="getWeatherImageById(weather.weather_id).src"
+            alt="{{ weather.weather }}"
+          />
+        </div>
+      </div>
+      <a
+        class="open-link"
+        target="_blank"
+        href="https://openweathermap.org/city/{{ weather.id }}"
+        >More details open</a
+      >
     </div>
   </app-city>
 </div>

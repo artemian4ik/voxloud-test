@@ -19,6 +19,5 @@ export class DashboardComponent {
 
   updateCityWeather(newCityWeather: WeatherInterface) {
     this.cityWeather = [...this.cityWeather, newCityWeather];
-    console.log(this.cityWeather);
   }
 }

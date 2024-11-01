@@ -17,16 +17,19 @@ export class WeatherService {
     const params = new HttpParams()
       .set('q', cityName)
       .set('units', 'metric')
+      .set('exclude', 'daily')
       .set('appid', this.apiKeyWeather);
 
     return this.http.get<WeatherResponse>(this.apiUrlWeather, { params }).pipe(
       map((response: WeatherResponse) => ({
+        id: response.id,
         city: response.name,
         temperature: response.main.temp,
         weather: response.weather[0].main,
         weather_id: response.weather[0].id,
         wind: response.wind,
         condition: {
+          feels_like: response.main.feels_like,
           pressure: response.main.pressure,
           humidity: response.main.humidity,
           temp_min: response.main.temp_min,

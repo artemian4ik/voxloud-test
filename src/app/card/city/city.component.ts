@@ -13,6 +13,5 @@ export class CityComponent {
 
   onClickFlipCard = () => {
     this.isFlipped = !this.isFlipped;
-    console.log(this.isFlipped);
   };
 }
