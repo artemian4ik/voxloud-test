@@ -24,6 +24,7 @@ export class WeatherService {
         city: response.name,
         temperature: response.main.temp,
         weather: response.weather[0].main,
+        weather_id: response.weather[0].id,
         wind: response.wind,
         condition: {
           pressure: response.main.pressure,

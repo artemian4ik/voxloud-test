@@ -9,10 +9,15 @@
 <div class="card-list">
   <app-city *ngFor="let weather of cityWeather">
     <div front>
-      <h2>{{ weather.city }}</h2>
+      <img
+        class="weather-logo"
+        [src]="getWeatherImageById(weather.weather_id).src"
+        alt="{{ weather.weather }}"
+      />
+      <h2>{{ weather.city }} {{ weather.temperature | mathRound }}&deg;C</h2>
     </div>
     <div back>
-      {{ weather.weather }}
+      {{ weather.weather_id }}
     </div>
   </app-city>
 </div>

@@ -1,6 +1,7 @@
 export interface WeatherInterface {
   city: string;
   temperature: number;
+  weather_id: number;
   weather: string;
   wind: {
     speed: number;
@@ -18,6 +19,7 @@ export const testWeatherData: WeatherInterface[] = [
   {
     city: 'Kharkiv',
     temperature: 10.33,
+    weather_id: 400,
     weather: 'sunny',
     wind: {
       speed: 10,
@@ -33,6 +35,7 @@ export const testWeatherData: WeatherInterface[] = [
   {
     city: 'Kyiv',
     temperature: 15.2,
+    weather_id: 501,
     weather: 'raining',
     wind: {
       speed: 50,
@@ -48,6 +51,7 @@ export const testWeatherData: WeatherInterface[] = [
   {
     city: 'Odesa',
     temperature: 20.5,
+    weather_id: 800,
     weather: 'sunny',
     wind: {
       speed: 10,
@@ -63,6 +67,7 @@ export const testWeatherData: WeatherInterface[] = [
   {
     city: 'Lviv',
     temperature: 8.4,
+    weather_id: 802,
     weather: 'sunny',
     wind: {
       speed: 10,
@@ -79,6 +84,7 @@ export const testWeatherData: WeatherInterface[] = [
     city: 'Dnipro',
     temperature: 12.0,
     weather: 'sunny',
+    weather_id: 803,
     wind: {
       speed: 10,
       deg: 90,
