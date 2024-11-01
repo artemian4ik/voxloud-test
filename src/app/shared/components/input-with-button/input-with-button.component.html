@@ -1,0 +1,11 @@
+<div class="input-with-button">
+  <app-input
+    [type]="type"
+    [value]="value"
+    [placeholder]="placeholder"
+    (valueChange)="onInputChange($event)"
+  ></app-input>
+  <app-button [buttonClass]="buttonClass" (click)="onButtonClick()">
+    {{ buttonText }}
+  </app-button>
+</div>

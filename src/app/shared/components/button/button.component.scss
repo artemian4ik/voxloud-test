@@ -1,0 +1,19 @@
+.btn {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: hsla(318, 100%, 65%, 0.82);
+  transition: background-color 100ms linear;
+
+  &:hover {
+    background-color: hsla(318, 98%, 57%, 0.82);
+  }
+
+  &:active {
+    background-color: hsla(318, 69%, 55%, 0.82);
+  }
+}

@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputCityComponent } from './input-city.component';
+import { InputCityFormComponent } from './input-city.component';
 
 describe('InputCityComponent', () => {
-  let component: InputCityComponent;
-  let fixture: ComponentFixture<InputCityComponent>;
+  let component: InputCityFormComponent;
+  let fixture: ComponentFixture<InputCityFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InputCityComponent]
-    })
-    .compileComponents();
+      imports: [InputCityFormComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(InputCityComponent);
+    fixture = TestBed.createComponent(InputCityFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,24 @@
+.input-with-button {
+  display: flex;
+  margin-top: 0.75rem;
+
+  app-input {
+    flex: 1;
+    width: 80%;
+  }
+
+  app-button {
+    flex-shrink: 0;
+    width: 20%;
+  }
+
+  ::ng-deep input {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
+  ::ng-deep .btn {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+  }
+}

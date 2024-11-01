@@ -1,1 +1,15 @@
-<p>input-city works!</p>
+<div class="form-add-city">
+  <app-block class="form-card-add-city">
+    <form (click)="addCityToLocalStore()" #cityForm="ngForm">
+      <h2>Add a weather card</h2>
+      <app-input-with-button
+        id="city"
+        name="city"
+        type="text"
+        placeholder="Inpun City"
+        buttonText="Add Card"
+        required
+      />
+    </form>
+  </app-block>
+</div>

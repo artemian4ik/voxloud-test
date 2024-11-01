@@ -1,0 +1,9 @@
+<div class="input-group">
+  <input
+    [type]="type"
+    [value]="value"
+    [placeholder]="placeholder"
+    (input)="onInputChange($event)"
+  />
+  <label class="form-label">{{ placeholder }}</label>
+</div>
