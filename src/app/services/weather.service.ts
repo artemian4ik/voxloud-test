@@ -12,7 +12,7 @@ import { RequestStatus } from '../models/request-status.model';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiKeyWeather: string = 'eaa2bb44be30f3ef709e5edb11085b82';
+  private apiKeyWeather: string = '';
   private apiUrlWeather: string = 'https://api.openweathermap.org/data/2.5';
   private storageKey = 'weatherData';
 
