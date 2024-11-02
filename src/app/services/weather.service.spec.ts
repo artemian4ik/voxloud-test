@@ -9,7 +9,7 @@ import { WeatherInterface } from '../models/weather.model';
 import { WeatherResponse } from '../models/weather-response.model';
 
 describe('WeatherService', () => {
-  const apiKeyWeather: string = 'eaa2bb44be30f3ef709e5edb11085b82';
+  const apiKeyWeather: string = '';
   let service: WeatherService;
   let httpMock: HttpTestingController;
 
