@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
+# Installation
+
+To get started with the weather dashboard, follow these steps:
+
+1. Clone the repository:
+
+   - Run the command: `git clone https://github.com/artemian4ik/voxloud-test`
+
+2. Navigate to the project directory:
+
+   - Use: `cd voxloud-tes`
+
+3. Install the dependencies:
+   - Execute: `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -26,7 +41,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-## --------------------------------------------------------
+# API Key Setup
+
+To fetch weather data from OpenWeatherMap, you'll need an API key:
+
+1. **Sign up** for an account at [OpenWeatherMap](https://openweathermap.org/).
+2. After registering, go to the **API Keys** section in your account settings.
+3. Create a new API key if one is not already generated.
+4. Once you have your API key, you need to add it to your project:
+   - Open the `src/app/services/weather.service.ts` file and add your API key:
+     - Set the property: `apiKeyWeather: 'YOUR_API_KEY_HERE'` (Replace with your OpenWeatherMap API key)
 
 # Task Voxloud
 
