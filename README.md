@@ -50,7 +50,7 @@ To fetch weather data from OpenWeatherMap, you'll need an API key:
 3. Create a new API key if one is not already generated.
 4. Once you have your API key, you need to add it to your project:
    - Open the `src/app/services/weather.service.ts` file and add your API key:
-     - Set the property: `apiKeyWeather: 'YOUR_API_KEY_HERE'` (Replace with your OpenWeatherMap API key)
+     - Set the property: `private apiUrlWeather: string = 'YOUR_API_KEY_HERE'` (Replace with your OpenWeatherMap API key)
 
 # Task Voxloud
 
