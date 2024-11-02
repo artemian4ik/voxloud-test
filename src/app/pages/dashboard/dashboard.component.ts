@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InputCityFormComponent } from '../../form/input-city/input-city.component';
-import { testWeatherData, WeatherInterface } from '../../models/weather.model';
+import { WeatherInterface } from '../../models/weather.model';
 import { CommonModule } from '@angular/common';
 import { CityComponent } from '../../card/city/city.component';
 import { getWeatherImageById } from '../../shared/utils/weather-images.util';
@@ -22,7 +22,7 @@ import { WeatherService } from '../../services/weather.service';
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent implements OnInit {
-  cityWeather: WeatherInterface[] = testWeatherData;
+  cityWeather: WeatherInterface[] = [];
 
   constructor(public weatherService: WeatherService) {}
 

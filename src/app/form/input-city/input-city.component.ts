@@ -46,6 +46,7 @@ export class InputCityFormComponent {
   addCityToLocalStore = () => {
     this.weatherService.getWeatherByCity(this.inputCityName).subscribe({
       next: (data) => {
+        this.handleCityChange('');
         this.cityWeatherChange.emit(data);
         this.errorMessage = null;
       },

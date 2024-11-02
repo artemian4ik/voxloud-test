@@ -14,6 +14,7 @@
         buttonType="submit"
         [buttonLoading]="isLoading"
         (buttonClick)="addCityToLocalStore()"
+        [value]="inputCityName"
         (valueChange)="handleCityChange($event)"
         required
       />
