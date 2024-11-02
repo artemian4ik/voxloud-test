@@ -1,3 +1,46 @@
+export interface WeatherGroupWeeklyCityInterface {
+  date: string;
+  nightTemp: number;
+  dayTemp: number;
+  dayOfWeek: string;
+}
+
+export interface WeatherWeeklyCityInterface {
+  clouds: { all: number };
+  dt: number;
+  dt_txt: string;
+  main: {
+    feels_like: number;
+    grnd_level: number;
+    humidity: number;
+    pressure: number;
+    sea_level: number;
+    temp: number;
+    temp_kf: number;
+    temp_max: number;
+    temp_min: number;
+  };
+  pop: number;
+  sys: { pod: string };
+  visibility: number;
+  weather: {
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
+  }[];
+  wind: {
+    speed: number;
+    deg: number;
+    gust?: number;
+  };
+}
+
+export interface WeatherCityLocationInterface {
+  lat: number;
+  lon: number;
+}
+
 export interface WeatherInterface {
   id: number;
   city: string;
@@ -15,6 +58,7 @@ export interface WeatherInterface {
     temp_max: number;
     feels_like: number;
   };
+  list?: WeatherGroupWeeklyCityInterface[];
 }
 
 export const testWeatherData: WeatherInterface[] = [

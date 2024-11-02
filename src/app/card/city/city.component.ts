@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-city',
@@ -9,9 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './city.component.scss',
 })
 export class CityComponent {
-  isFlipped = false;
+  @Input() cityName: string = '';
+  @Output() fetchWeatherForecast = new EventEmitter<string>();
+  isFlipped: boolean = false;
+  errorMessage: string = '';
+
+  constructor() {}
 
   onClickFlipCard = () => {
     this.isFlipped = !this.isFlipped;
+
+    if (this.isFlipped) {
+      this.fetchWeatherForecast.emit(this.cityName);
+    }
   };
 }

@@ -18,7 +18,7 @@
 .card-content {
   margin: 1rem;
   padding: 1rem 0rem;
-  height: 8.5rem;
+  height: 13.5rem;
   display: block;
   position: relative;
   background: rgba(225, 225, 225, 0.3);
@@ -60,13 +60,4 @@
 
 .card-front {
   z-index: 1;
-}
-
-/*
-Adaptation for phone
-*/
-@media (max-width: 768px) {
-  .card-content {
-    height: 11.5rem;
-  }
 }

@@ -8,8 +8,12 @@
 ></app-form-input-city>
 
 <div class="card-list">
-  <app-city *ngFor="let weather of cityWeather">
-    <div front>
+  <app-city
+    *ngFor="let weather of cityWeather"
+    cityName="{{ weather.city }}"
+    (fetchWeatherForecast)="fetchWeatherForecast($event)"
+  >
+    <div front class="card-item-front">
       <img
         class="weather-logo"
         [src]="getWeatherImageById(weather.weather_id).src"
@@ -35,6 +39,21 @@
             [src]="getWeatherImageById(weather.weather_id).src"
             alt="{{ weather.weather }}"
           />
+        </div>
+      </div>
+      <div class="card-weekly-weather">
+        <div *ngFor="let day of weather.list" class="day-block">
+          <div class="day-header">
+            {{ day.dayOfWeek }}
+          </div>
+          <div class="day-temperature">
+            <div class="night-temp">
+              {{ day.nightTemp | number : "1.0-0" }}&deg;C
+            </div>
+            <div class="day-temp">
+              {{ day.dayTemp | number : "1.0-0" }}&deg;C
+            </div>
+          </div>
         </div>
       </div>
       <app-icon-button
