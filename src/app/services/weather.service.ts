@@ -1,11 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, Observable, switchMap, throwError } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { WeatherResponse } from '../models/weather-response.model';
-import {
-  WeatherCityLocationInterface,
-  WeatherInterface,
-} from '../models/weather.model';
+import { WeatherInterface } from '../models/weather.model';
 import { RequestStatus } from '../models/request-status.model';
 
 @Injectable({
