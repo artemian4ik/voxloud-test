@@ -1,7 +1,7 @@
 .logo {
   text-align: end;
   color: #ffffff;
-  margin: 1rem 2rem 1rem 0rem;
+  padding: 1rem 2rem 1rem 0rem;
 }
 
 .card-list {
@@ -28,6 +28,7 @@
 }
 .card-information-weather p {
   text-align: left;
+  white-space: nowrap;
 }
 .card-weather-block {
   width: 40%;
@@ -35,6 +36,23 @@
 
   justify-content: center;
   margin-top: -3rem;
+}
+
+.card-front div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.card-item-back {
+  display: flex;
+  flex-direction: column;
+}
+
+app-icon-button {
+  height: 24px;
+  margin-top: auto;
 }
 
 .open-link {
@@ -48,5 +66,50 @@
 
   &:active {
     color: hsla(318, 69%, 55%, 0.82);
+  }
+}
+
+/*
+Adaptation for tablet
+*/
+@media (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+/*
+Adaptation for phone
+*/
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 0 !important;
+  }
+
+  .card-item-back {
+    height: 12rem !important;
+  }
+
+  .card-information-weather {
+    width: 100% !important;
+  }
+
+  .card-information-weather p {
+    white-space: normal !important;
+  }
+
+  .card-weather-block {
+    display: none;
+  }
+}
+
+/*
+Adaptation for small phone 
+*/
+@media (max-width: 480px) {
+  .card-list {
+    grid-template-columns: 1fr !important;
+    grid-gap: 0 !important;
   }
 }

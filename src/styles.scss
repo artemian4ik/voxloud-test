@@ -13,13 +13,13 @@
 
 body {
   height: 100vh;
-  overflow-y: hidden;
 
   background-image: url("/assets/background/background.jpg");
   background-position: center;
   background-origin: border-box;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   font-family: "Roboto", sans-serif;
   color: #ffffff;

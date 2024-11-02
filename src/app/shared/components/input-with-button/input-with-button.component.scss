@@ -1,6 +1,6 @@
 .input-with-button {
   display: flex;
-  margin-top: 0.75rem;
+  margin-top: 1.25rem;
 
   app-input {
     flex: 1;
@@ -20,5 +20,17 @@
   ::ng-deep .btn {
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
+  }
+}
+
+/*
+Adaptation for phone
+*/
+@media (max-width: 768px) {
+  app-input {
+    width: 70% !important;
+  }
+  app-button {
+    width: 30% !important;
   }
 }

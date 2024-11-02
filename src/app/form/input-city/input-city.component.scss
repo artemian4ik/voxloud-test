@@ -17,3 +17,18 @@ button {
   height: 1rem;
   width: 60px;
 }
+
+/*
+Adaptation for tablet
+*/
+@media (max-width: 1024px) {
+  .form-card-add-city {
+    width: 100vw !important;
+  }
+}
+
+/*
+Adaptation for phone
+*/
+@media (max-width: 768px) {
+}

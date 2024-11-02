@@ -14,10 +14,7 @@ import { WeatherInterface } from '../../models/weather.model';
 import { LoaderSpinnerComponent } from '../../loader-spinner/loader-spinner.component';
 import { CommonModule } from '@angular/common';
 import { NotificationComponent } from '../../shared/components/notification/notification.component';
-interface Notification {
-  message: string;
-  type: 'success' | 'error' | 'info';
-}
+
 @Component({
   selector: 'app-form-input-city',
   standalone: true,
