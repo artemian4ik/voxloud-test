@@ -5,7 +5,7 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-import { testWeatherData, WeatherInterface } from '../models/weather.model';
+import { WeatherInterface } from '../models/weather.model';
 import { WeatherResponse } from '../models/weather-response.model';
 
 describe('WeatherService', () => {
@@ -25,7 +25,7 @@ describe('WeatherService', () => {
     httpMock.verify();
   });
 
-  it('should be created', () => {
+  it('should be created WeatherService', () => {
     expect(service).toBeTruthy();
   });
 
