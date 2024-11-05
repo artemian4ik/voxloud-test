@@ -29,7 +29,7 @@ export class WeatherService {
       .set('appid', this.apiKeyWeather);
 
     return this.http
-      .get<any>(`https://api.openweathermap.org/data/2.5/forecast`, {
+      .get<any>(`${this.apiUrlWeather}/forecast`, {
         params,
       })
       .pipe(
